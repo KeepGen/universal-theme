@@ -13,6 +13,12 @@ if ( ! function_exists ( 'universal_theme_setup' ) ) :
       'header-text' => 'Universal Logo',
       'unlink-homepage-logo' => false, // WP 5.5
     ] );
+
+    // Adding header menu
+    register_nav_menus( [
+      'header_menu' => 'Header menu',
+      'footer_menu' => 'Footer menu'
+    ] );
   }
 endif;
 add_action( 'after_setup_theme', 'universal_theme_setup' );

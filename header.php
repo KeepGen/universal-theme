@@ -12,11 +12,21 @@
     <div class="header-wrapper">
       <?php
         if( has_custom_logo() ){
-          echo get_custom_logo();
+          the_custom_logo();
         } else {
           echo 'universal';
         }
       ?>
+      <?php
+        wp_nav_menu( [
+          'theme_location'  => 'header_menu',
+          'container'       => 'nav',
+          'container_class' => 'header-nav',
+          'menu_class'      => 'header-menu',
+          'echo'            => true,
+        ] );
+      ?>
+      <?php echo get_search_form(); ?>
     </div>
   </div>
 </header>
