@@ -18,10 +18,10 @@
                   setup_postdata( $post );
             ?>
             <!-- Выводим записи -->
-            <img src="<?php the_post_thumbnail_url() ?>" alt="" class="post-thumb">
+            <img src="<?php the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" class="post-thumb">
             <?php $author_id = get_the_author_meta('ID'); ?>
             <a href="<?php echo get_author_posts_url($author_id); ?>" class="author">
-               <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="avatar">
+               <img src="<?php echo get_avatar_url($author_id) ?>" alt="<?php the_author(); ?>" class="avatar">
                <div class="author-bio">
                   <span class="author-name"><?php the_author(); ?></span>
                   <span class="author-rank">Должность</span>
