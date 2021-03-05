@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Lato Black";
-  src: local("Lato-Black"), local("Lato Black"), url(".assets/fonts/Lato-Black.woff2") format("woff2"), url(".assets/fonts/Lato-Black.woff") format("woff");
+  src: local("Lato-Black"), local("Lato Black"), url("../fonts/Lato-Black.woff") format("woff"), url("../fonts/Lato-Black.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: local("Lato-Regular"), local("Lato Regular"), url(".assets/fonts/Lato-Regular.woff2") format("woff2"), url(".assets/fonts/Lato-Regular.woff") format("woff");
+  src: local("Lato-Regular"), local("Lato Regular"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
@@ -120,17 +120,7 @@ body {
   padding-top: 30px;
   background-color: #232D33;
   position: relative;
-}
-
-.front-page-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #E5E5E5;
-  width: 100%;
-  height: 20%;
-  z-index: 0;
+  height: 475px;
 }
 
 .hero {
@@ -216,7 +206,12 @@ body {
   border-radius: 50%;
 }
 
-.hero .left .category-name {
+.hero .left .post-categories {
+  padding: 0;
+  margin: 0;
+}
+
+.hero .left .post-categories a {
   color: #4592FF;
   text-transform: uppercase;
   font-weight: 900;
@@ -232,6 +227,7 @@ body {
   font-family: 'Roboto Slab', serif;
   margin-top: 20px;
   margin-bottom: 50px;
+  max-width: 590px;
 }
 
 .hero .left .post-text {
@@ -280,15 +276,27 @@ body {
   min-height: 100px;
 }
 
-.hero .right .post:hover {
-  background-color: #F5F5F5;
+.hero .right .post-categories {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.hero .right .post .category-name {
+.hero .right .post-categories a {
   font-weight: 900;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero .right .post-permalink {
+  text-decoration: none;
+  color: #4B5157;
+}
+
+.hero .right .post:hover {
+  background-color: #F5F5F5;
 }
 
 .hero .right .post-title {

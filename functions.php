@@ -6,6 +6,9 @@ if ( ! function_exists ( 'universal_theme_setup' ) ) :
     // Adding title tag
     add_theme_support( 'title-tag' );
 
+    // Adding thumbnails
+    add_theme_support( 'post-thumbnails', array( 'post' ) );
+
     // Adding Website Logo
     add_theme_support( 'custom-logo', [
       'width'       => 163,
