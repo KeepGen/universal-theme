@@ -66,7 +66,7 @@
                <li class="post">
                   <?php the_category(); ?>
                   <a class="post-permalink" href="<?php echo get_the_permalink(); ?>">
-                  <h4 class="post-title"><?php the_title(); ?></h4>
+                  <h4 class="post-title"><?php echo wp_trim_words( get_the_title(), 8, '...' ) ?></h4>
                   </a>
                </li>
                <?php 
