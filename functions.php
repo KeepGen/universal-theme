@@ -109,8 +109,8 @@ class Downloader_Widget extends WP_Widget {
 	 */
 	function form( $instance ) {
 		$title = @ $instance['title'] ?: 'Полезные файлы';
-    $description = @ $instance['description'] ?: 'Описание';
-    $link = @ $instance['link'] ?: 'https://yandex.ru';
+		$description = @ $instance['description'] ?: 'Описание';
+		$link = @ $instance['link'] ?: 'https://yandex.ru';
 
 		?>
 		<p>
@@ -178,6 +178,17 @@ function register_downloader_widget() {
 	register_widget( 'Downloader_Widget' );
 }
 add_action( 'widgets_init', 'register_downloader_widget' );
+
+## Изменяем настройки облака тегов
+add_action( 'widget_tag_cloud_args' , 'edit_widget_tag_cloud_args');
+function edit_widget_tag_cloud_args($args) {
+	$args	['unit'] = 'px';
+	$args	['smallest'] = '14';
+	$args	['largest'] = '14';
+	$args	['number'] = '11';
+	$args	['orderby'] = 'count';
+	return $args;
+}
 
 ## отключаем создание миниатюр файлов для указанных размеров
 add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
