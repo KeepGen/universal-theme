@@ -119,6 +119,7 @@
       ?>
    </ul>
    <!-- /.article-list -->
+
    <div class="main-grid">
       <ul class="article-grid">
          <?php		
@@ -250,34 +251,100 @@
 </div>
 <!-- /.container -->
 
+<!-- Секция с одним постом на фоновой картинке -->
 <?php		
-global $post;
+   global $post;
 
-$query = new WP_Query( [
-	'posts_per_page' => 1,
-   'category_name' => 'investigation',
-] );
+   $query = new WP_Query( [
+      'posts_per_page' => 1,
+      'category_name' => 'investigation',
+   ] );
 
-if ( $query->have_posts() ) {
-	while ( $query->have_posts() ) {
-		$query->the_post();
-		?>
-		
-      <section class="investigation" style="background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)), url(<?php echo get_the_post_thumbnail_url()?>) no-repeat center center">
-         <div class="container">
-            <h2 class="investigation-title"><?php the_title(); ?></h2>
-            <a href="<?php echo get_the_permalink() ?>" class="more">Читать статью</a>
-         </div>
-      </section>
+   if ( $query->have_posts() ) {
+      while ( $query->have_posts() ) {
+         $query->the_post();
+         ?>
+         
+         <section class="investigation" style="background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)), url(<?php echo get_the_post_thumbnail_url()?>) no-repeat center center">
+            <div class="container">
+               <h2 class="investigation-title"><?php the_title(); ?></h2>
+               <a href="<?php echo get_the_permalink() ?>" class="more">Читать статью</a>
+            </div>
+         </section>
 
-		<?php 
-	}
-} else {
-	// Постов не найдено
-}
+         <?php 
+      }
+   } else {
+      // Постов не найдено
+   }
 
-wp_reset_postdata(); // Сбрасываем $post
+   wp_reset_postdata(); // Сбрасываем $post
 ?>
 <!-- /.investigation -->
 
+<div class="container">
+   <div class="latest-articles">
+      <div class="left">
+         <?php
+            global $post;
+
+            $myposts = get_posts([ 
+               'numberposts' => 6,
+               'category_name'    => 'hot, opinions, news, specials',
+            ]);
+
+            if( $myposts ){
+               foreach( $myposts as $post ){
+                  setup_postdata( $post );
+         ?>
+         <ul class="post-list">
+            <li class="post">
+               <a href="<?php the_permalink() ?>" class="latest-article-permalink">
+                  <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="article-thumb">
+                  <div class="post-info">
+                     <div class="category-bookmark">
+                        <span class="category-name"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
+                        <img src="<?php echo get_template_directory_uri( ) . '/assets/images/bookmark.svg' ?>" alt="icon: bookmark" class="bookmark-icon" class="bookmark">   
+                     </div>
+                     <!-- /.category-bookmark -->
+                     <h4 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 65, '...') ?></h4>
+                     <div class="post-preview"><?php echo mb_strimwidth(get_the_excerpt(), 0, 190, '...') ?></div>
+                     <div class="post-details">
+                        <span class="date"><?php the_time('j F'); ?></span>
+                        <div class="comments">
+                           <img src="<?php echo get_template_directory_uri( ) . '/assets/images/comment.svg' ?>" alt="icon: comment" class="comments-icon">
+                           <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
+                        </div>
+
+                        <div class="likes">
+                           <img src="<?php echo get_template_directory_uri() . '/assets/images/heart-grey.svg' ?>" alt="icon: like" class="likes-icon">
+                           <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
+                        </div>
+                     </div>
+                     <!-- /.post-details -->
+                  </div>
+                  <!-- /.post-info -->
+               </a>
+            </li>
+         </ul>
+         <!-- /.post-list -->
+         <?php 
+               }
+            } else {
+               // Постов не найдено
+            }
+
+            wp_reset_postdata(); // Сбрасываем $post
+         ?>
+      </div>
+      <!-- /.left -->
+
+      <div class="right">
+         Right Side
+      </div>
+      <!-- /.right -->
+   </div>
+   <!-- /.latest-articles -->
+</div>
+<!-- /.container -->
 

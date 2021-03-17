@@ -870,6 +870,7 @@ body {
 .investigation {
   padding: 50px 0 55px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .investigation-title {
@@ -881,4 +882,151 @@ body {
   color: #FFFFFF;
   max-width: 946px;
   margin: 0 auto 25px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.latest-articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.latest-articles .left {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  margin: 0;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.latest-articles .left .post-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.latest-articles .left .post-list .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #D9DADB;
+}
+
+.latest-articles .left .post-list .post:not(:last-child) {
+  margin: 0;
+  padding: 0;
+}
+
+.latest-articles .left .post-list .post .article-thumb {
+  min-width: 336px;
+  height: 195px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.latest-articles .left .post-list .post .latest-article-permalink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+.latest-articles .left .post-list .post .latest-article-permalink:visited, .latest-articles .left .post-list .post .latest-article-permalink:focus, .latest-articles .left .post-list .post .latest-article-permalink:hover {
+  color: #262D33;
+}
+
+.latest-articles .left .post-list .post-info {
+  margin-left: 25px;
+}
+
+.latest-articles .left .post-list .post-info .category-bookmark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.latest-articles .left .post-list .post-info .post-title {
+  color: #262D33;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  width: 450px;
+}
+
+.latest-articles .left .post-list .post-info .post-preview {
+  margin-top: 15px;
+  color: #4B5157;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.latest-articles .left .post-list .post-info .post-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  color: #939699;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.latest-articles .left .post-list .post-info .post-details .date, .latest-articles .left .post-list .post-info .post-details .comments, .latest-articles .left .post-list .post-info .post-details .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.latest-articles .left .post-list .post-info .post-details .date:not(:last-child), .latest-articles .left .post-list .post-info .post-details .comments:not(:last-child), .latest-articles .left .post-list .post-info .post-details .likes:not(:last-child) {
+  margin-right: 7px;
+}
+
+.latest-articles .left .post-list .post-info .post-details .date-counter, .latest-articles .left .post-list .post-info .post-details .comments-counter, .latest-articles .left .post-list .post-info .post-details .likes-counter {
+  margin-left: 5px;
+}
+
+.latest-articles .right {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin: 0;
+  padding: 0;
 }
