@@ -413,6 +413,10 @@ body {
   color: #262D33;
 }
 
+.article-grid-permalink:visited {
+  color: #262D33;
+}
+
 .article-grid-item {
   border-radius: 10px;
   background-color: #FFFFFF;
