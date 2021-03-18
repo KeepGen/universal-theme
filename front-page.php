@@ -29,7 +29,16 @@
                </div>
             </a>
             <div class="post-text">
-               <?php the_category(); ?>
+               <?php
+                  foreach (get_the_category() as $category ) {
+                     printf(
+                        '<a href="%s" class="category-link %s">%s</a>',
+                        esc_url ( get_category_link($category) ),
+                        esc_html ( $category -> slug ),
+                        esc_html ( $category -> name ),
+                     );
+                  }
+               ?>
                <h2 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 41, '...') ?></h2>
                <a href="<?php echo get_the_permalink() ?>" class="more">Читать далее</a>
             </div>
@@ -64,7 +73,16 @@
                ?>
                <!-- Выводим записи -->
                <li class="post">
-                  <?php the_category(); ?>
+                  <?php 
+                     foreach (get_the_category() as $category ) {
+                     printf(
+                        '<a href="%s" class="category-link %s">%s</a>',
+                        esc_url ( get_category_link($category) ),
+                        esc_html ( $category -> slug ),
+                        esc_html ( $category -> name ),
+                     );
+                  }
+                  ?>
                   <a class="post-permalink" href="<?php echo get_the_permalink(); ?>">
                   <h4 class="post-title"><?php echo wp_trim_words( get_the_title(), 8, '...' ) ?></h4>
                   </a>
@@ -245,8 +263,8 @@
       </ul>
       <!-- /.article-grid -->
       
-      <!-- Подключаем сайдбар -->
-      <?php get_sidebar(); ?>
+      <!-- Подключаем верхний сайдбар -->
+      <?php get_sidebar('home-top'); ?>
    </div>
 </div>
 <!-- /.container -->
@@ -284,15 +302,13 @@
 
 <div class="container">
    <div class="latest-articles">
-      <div class="left">
+      <div class="latest-articles-main">
          <?php
             global $post;
-
             $myposts = get_posts([ 
                'numberposts' => 6,
                'category_name'    => 'hot, opinions, news, specials',
             ]);
-
             if( $myposts ){
                foreach( $myposts as $post ){
                   setup_postdata( $post );
@@ -333,16 +349,13 @@
             } else {
                // Постов не найдено
             }
-
             wp_reset_postdata(); // Сбрасываем $post
          ?>
       </div>
-      <!-- /.left -->
+      <!-- /.latest-articles-main -->
 
-      <div class="right">
-         Right Side
-      </div>
-      <!-- /.right -->
+      <!-- Подключаем верхний сайдбар -->
+      <?php get_sidebar('home-bottom'); ?>
    </div>
    <!-- /.latest-articles -->
 </div>

@@ -1,7 +1,10 @@
+body
+   counter-reset: section
 .sidebar
    &-front-page
       margin-left: 30px
       margin-top: 30px
+      width: 23%
 .widget
    background-color: #FFFFFF
    border-radius: 10px
@@ -40,6 +43,43 @@
             align-items: center
             justify-content: space-between
             flex-wrap: wrap
+   &-recent-posts
+      &-wrapper
+         padding: 0 25px 17px
+      a
+         display: flex
+         align-items: center
+         text-decoration: none
+         padding-top: 17px
+         padding-bottom: 17px
+         position: relative
+         &:not(:last-child)
+            border-bottom: 1px solid #D9DADB
+         &::before
+            position: absolute
+            right: 5px
+            font-size: 70px
+            line-height: 50px
+            color: #262d33
+            opacity: 0.08
+            font-family: "Lato Black", sans-serif
+            font-style: italic
+            counter-increment: section
+            content: counter(section)
+      img
+         width: 60px
+         height: 60px
+         margin-right: 10px
+      h4
+         font-size: 14px
+         line-height: 20px
+         color: #4B5157
+         margin-top: 0
+         margin-bottom: 3px
+      span
+         color: #939699
+         font-size: 12px
+         line-height: 15px
    &-downloader
       background: #3bbdc4 url('../images/file.svg') no-repeat top 22px right 24px
       border-radius: 10px

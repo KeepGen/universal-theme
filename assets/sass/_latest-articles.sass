@@ -2,83 +2,86 @@
    box-sizing: border-box
 .latest-articles
    display: flex
-   margin-bottom: 60px
-   .left
-      flex-basis: 75%
-      margin: 0
+   justify-content: space-between
+   align-items: flex-start
+   &-main
+      display: flex
+      flex-wrap: wrap
+      width: 75%
       padding: 25px
       background-color: #ffffff
       border-radius: 10px
-      .post-list
-         padding: 0
+      margin-top: 30px
+      margin-bottom: 60px
+   .post-list
+      padding: 0
+      margin: 0
+      list-style: none
+      .post
+         display: flex
+         align-items: center
+         justify-content: space-between
          margin: 0
-         list-style: none
-         .post
+         margin-bottom: 15px
+         padding-bottom: 15px
+         border-bottom: 1px solid #D9DADB
+         &:not(:last-child)
+            margin: 0
+            padding: 0
+         .article-thumb
+            min-width: 336px
+            height: 195px
+            object-fit: cover
+         .latest-article-permalink
+            display: flex
+            text-decoration: none
+            &:visited, &:focus, &:hover
+               color: #262D33
+      .post-info
+         margin-left: 25px
+         .category-bookmark
             display: flex
             align-items: center
             justify-content: space-between
-            margin: 0
-            margin-bottom: 15px
-            padding-bottom: 15px
-            border-bottom: 1px solid #D9DADB
-            &:not(:last-child)
-               margin: 0
-               padding: 0
-            .article-thumb
-               min-width: 336px
-               height: 195px
-               object-fit: cover
-            .latest-article-permalink
-               display: flex
-               text-decoration: none
-               &:visited, &:focus, &:hover
-                  color: #262D33
-         .post-info
-            margin-left: 25px
-            .category-bookmark
+            text-transform: uppercase
+            font-style: normal
+            font-weight: 900
+            font-size: 12px
+            line-height: 15px
+         .post
+            &-title
+               color: #262D33
+               font-family: Roboto Slab
+               font-style: normal
+               font-weight: bold
+               font-size: 20px
+               line-height: 25px
+               margin-top: 15px
+               margin-bottom: 0
+               width: 450px
+            &-preview
+               margin-top: 15px
+               color: #4B5157
+               font-style: normal
+               font-weight: normal
+               font-size: 14px
+               line-height: 20px
+            &-details
                display: flex
                align-items: center
-               justify-content: space-between
-               text-transform: uppercase
+               margin-top: 20px
+               color: #939699
                font-style: normal
-               font-weight: 900
+               font-weight: normal
                font-size: 12px
                line-height: 15px
-            .post
-               &-title
-                  color: #262D33
-                  font-family: Roboto Slab
-                  font-style: normal
-                  font-weight: bold
-                  font-size: 20px
-                  line-height: 25px
-                  margin-top: 15px
-                  margin-bottom: 0
-                  width: 450px
-               &-preview
-                  margin-top: 15px
-                  color: #4B5157
-                  font-style: normal
-                  font-weight: normal
-                  font-size: 14px
-                  line-height: 20px
-               &-details
+               .date, .comments, .likes
                   display: flex
                   align-items: center
-                  margin-top: 20px
-                  color: #939699
-                  font-style: normal
-                  font-weight: normal
-                  font-size: 12px
-                  line-height: 15px
-                  .date, .comments, .likes
-                     display: flex
-                     align-items: center
-                     &:not(:last-child)
-                        margin-right: 7px
-                     &-counter
-                        margin-left: 5px
+                  &:not(:last-child)
+                     margin-right: 7px
+                  &-counter
+                     margin-left: 5px
    .right
-      flex-basis: 25%
       margin: 0
       padding: 0
