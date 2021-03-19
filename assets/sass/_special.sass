@@ -1,0 +1,98 @@
+.special
+   background-color: #232D33
+   padding: 60px 0
+   &-grid
+      display: flex
+      justify-content: space-between
+.photo-report
+   min-height: 570px
+   width: 49%
+   position: relative
+   overflow: hidden
+   border-radius: 10px
+   .category-link
+      color: #FFFFFF
+      border-radius: 3px
+      background-color: #3DC47E
+      font-size: 12px
+      line-height: 15px
+      align-self: start
+      text-transform: none
+      padding: 5px 12px
+      position: absolute
+      left: 18px
+      top: 18px
+   .author
+      text-align: center
+      text-decoration: none
+      &-name
+         display: block
+         font-size: 14px
+         line-height: 20px
+         color: #FFFFFF
+      &-rank
+         font-size: 12px
+         line-height: 15px
+         color: rgba(#FFFFFF, 0.4)
+      &-avatar
+         border-radius: 50%
+         width: 45px
+         height: 45px
+         margin-bottom: 8px
+   &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(64, 48, 61, 0.38),rgba(64, 48, 61, 0.35))
+      z-index: 1
+   &-button
+      color: #ffffff
+      background: #4592ff
+      border-radius: 20px
+      padding: 10px 20px
+      text-decoration: none
+      fill: #ffffff
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      &:hover
+         color: #ffffff
+         background: #599cfc
+   &-counter
+      margin-left: 8px
+   &-icon
+      margin-right: 8px
+   &-content
+      position: relative
+      z-index: 2
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+      padding: 18px
+      height: 100%
+      text-align: center
+   &-slider
+      position: absolute
+      z-index: 0
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      .swiper-slide
+         height: 100%
+         img
+            width: 100%
+            height: inherit
+            object-fit: cover
+   &-title
+      font-family: Roboto Slab
+      font-size: 40px
+      line-height: 50px
+      color: #FFFFFF
+.other
+   width: 49%
+   border: 1px solid red
