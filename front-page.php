@@ -468,7 +468,79 @@
          ?>
          
          <div class="other">
-            2
+            <!-- <div class="career"></div> -->
+
+            <ul class="career-grid">
+               <?php		
+                  global $post;
+                  // формируем запрос в базу данных
+                  $query = new WP_Query( [
+                     // получаем кол-во постов
+                     'posts_per_page' => 3,
+                     'category_name' => 'career',
+                  ] );
+                     // проверяем, есть ли посты
+                  if ( $query->have_posts() ) {
+                     // создаем переменную-счетчик постов
+                     $cnt = 0;
+                     // пока посты есть, выводим их
+                     while ( $query->have_posts() ) {
+                        $query->the_post();
+                        // увеличиваем счетчик постов
+                        $cnt++;
+                        switch ($cnt) {
+                           // выводим первый пост
+                           case '1':
+                              ?>
+                                 <li class="career-grid-item career-grid-item-1">
+                                 <img src="<?php echo get_template_directory_uri() . '/assets/images/career-photo.png'?>" alt="<?php get_the_title() ?>" class="career-grid-item-1-bg">
+                                 <a href="<?php the_permalink() ?>" class="career-grid-permalink">
+                                    <?php
+                                       foreach (get_the_category() as $category){
+                                          printf(
+                                             '<a href="%s" class="category-link">%s</a>',
+                                             esc_url( get_category_link( $category ) ),
+                                             esc_html( $category -> name),
+                                          );
+                                       }
+                                    ?>
+                                    </a>
+
+                                    <h4 class="career-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 55, '...') ?></h4>
+                                    <p class="career-grid-excerpt">
+                                       <?php echo mb_strimwidth(get_the_excerpt(), 0, 170, '...') ?>
+                                    </p>
+                                    <a href="<?php echo get_the_permalink() ?>" class="more">Читать далее</a>
+                                 </li>
+                              <?php 
+                           break;
+                           
+                           // выводим остальные посты
+                           default:
+                              ?>
+                              <li class="career-grid-item career-grid-item-default">
+                                 <a href="<?php the_permalink() ?>" class="career-grid-permalink">
+                                    <h4 class="career-grid-title-mini"><?php echo mb_strimwidth(get_the_title(), 0, 20, '...') ?></h4>
+                                    <p class="career-grid-excerpt-mini"><?php echo mb_strimwidth(get_the_excerpt(), 0, 70, '...') ?></p>
+                                    <span class="career-date"><?php the_time('j F'); ?></span>
+                                 </a>
+                              </li>
+                              <?php
+                           break;
+                        }
+                        ?>
+                        <!-- Вывода постов, функции цикла: the_title() и т.д. -->
+                        <?php 
+                     }
+                  } else {
+                     // Постов не найдено
+                  }
+
+                  wp_reset_postdata(); // Сбрасываем $post
+               ?>
+            </ul>
+            <!-- /.article-grid -->
+
          </div>
          <!-- /.other -->
       </div>
