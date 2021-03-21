@@ -141,3 +141,26 @@
       color: #AC8EE3
    &.css
       color: #3DC47E
+@media screen and ( max-width: 1200px )
+   .hero
+      .right
+         flex-basis: 35%
+@media screen and ( max-width: 768px )
+   .hero
+      flex-direction: column
+      .left
+         .post
+            &-text
+               margin-top: 30px
+   .front-page
+      &-header
+         height: auto
+         padding-bottom: 30px
+@media screen and ( max-width: 576px )
+   .hero
+      .left
+         padding: 30px 30px 100px 30px
+         .post
+            &-title
+               font-size: 30px
+               line-height: 40px

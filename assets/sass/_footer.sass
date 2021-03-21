@@ -19,7 +19,7 @@
          border-top: 3px solid #6E99AE
       &-bar
          display: flex
-         align-items: flex-star
+         align-items: flex-start
          margin-bottom: 60px
       &-title
          font-family: "Lato Black", sans-serif
@@ -69,3 +69,39 @@
          p
             margin-top: 0
             margin-bottom: 25px
+@media screen and ( max-width: 1024px )
+   .footer
+      &-menu
+         flex-basis: 33%
+         margin-bottom: 30px
+         &-bar
+            flex-wrap: wrap
+         &-title
+            margin-top: 10px
+            margin-bottom: 20px
+      &-text
+         &-wrapper
+            flex-direction: column
+@media screen and ( max-width: 768px )
+   .footer
+      &-menu
+         margin-bottom: 30px
+         &-bar
+            flex-wrap: wrap
+         &-title
+            margin-top: 10px
+            margin-bottom: 20px
+      &-info
+         flex-direction: column
+      &-nav
+         align-items: start
+   .menu-footer-menu-container
+      margin-bottom: 20px
+@media screen and ( max-width: 576px )
+   .footer
+      &-menu
+         flex-basis: 50%
+      &-nav
+         flex-wrap: wrap
+         align-items: start
+         justify-content: space-between

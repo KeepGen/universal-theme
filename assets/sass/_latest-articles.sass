@@ -58,7 +58,6 @@
                line-height: 25px
                margin-top: 15px
                margin-bottom: 0
-               width: 450px
             &-preview
                margin-top: 15px
                color: #4B5157
@@ -85,3 +84,23 @@
    .right
       margin: 0
       padding: 0
+@media screen and ( max-width: 1200px )
+   .latest-articles
+      &-main
+         width: 70%
+         margin-right: 30px
+      .post-list
+         .post
+            .latest-article-permalink
+               flex-direction: column
+            .article-thumb
+               min-width: 100%
+               margin-bottom: 15px
+            &-info
+               margin-left: 0
+@media screen and ( max-width: 960px )
+   .latest-articles
+      flex-direction: column
+      &-main
+         width: 100%
+         margin-bottom: 0

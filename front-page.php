@@ -9,7 +9,7 @@
 
             $myposts = get_posts([ 
                'numberposts' => 1,
-               'category_name' => 'javascript, html, css, web-design',
+               'category_name' => 'web-design',
             ]);
 
             // Checking if posts exist
