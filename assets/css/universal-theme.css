@@ -80,6 +80,45 @@ body {
   display: none;
 }
 
+.header-light {
+  background-color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header-light .logo-name {
+  color: #4592ff;
+}
+
+.header-light .menu-item a {
+  color: #939699;
+}
+
+.header-light .search-form input {
+  background-color: #f5f5f5;
+}
+
+.custom-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-name {
+  color: #ffffff;
+  font-family: Roboto Slab;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
 .menu-item a {
   text-decoration: none;
   color: #ffffff;
@@ -1496,6 +1535,10 @@ body {
   background: #599cfc;
 }
 
+.photo-report-button:visited {
+  color: #ffffff;
+}
+
 .photo-report-counter {
   margin-left: 8px;
 }
@@ -1873,6 +1916,10 @@ body {
   font-family: "Lato Black", sans-serif;
 }
 
+.footer-nav-wrapper {
+  margin-right: auto;
+}
+
 .footer-text {
   max-width: 750px;
 }
@@ -1963,9 +2010,17 @@ body {
   }
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 .post-header {
   padding: 60px 0 72px;
   color: #ffffff;
+}
+
+.post-header-wrapper {
+  position: relative;
 }
 
 .post-header-nav {
@@ -1978,6 +2033,31 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.post-header-title {
+  font-size: 55px;
+  line-height: 70px;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  max-width: 750px;
+  margin-top: 52px;
+  margin-bottom: 30px;
+  margin-right: auto;
+}
+
+.post-header-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .post-header .home-link {
@@ -2064,30 +2144,122 @@ body {
   margin-right: 20px;
 }
 
-.post-header-wrapper {
+.post-author {
+  position: absolute;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #D9DADB;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 263px;
 }
 
-.post-title {
-  font-size: 55px;
-  line-height: 70px;
+.post-author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #4B5157;
+  padding: 35px 25px 20px;
+}
+
+.post-author-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-author-name {
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: bold;
-  max-width: 750px;
-  margin-top: 52px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 25px;
+  color: #262D33;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.post-author-rank {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.post-author-posts {
+  font-family: "Lato Black", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262D33;
+}
+
+.post-author-link {
+  font-family: "Lato Black", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262D33;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-top: 1px solid #D9DADB;
+  width: 100%;
+  text-align: center;
+}
+
+.post-author-link:visited {
+  color: #262D33;
+}
+
+.post-content {
+  padding-top: 60px;
+}
+
+.post-content p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #4b5157;
+  margin: 30px 0;
+}
+
+.post-content p:first-child {
+  max-width: 620px;
 }
 
 .time-icon, .likes-icon, .comments-icon {
   margin-right: 5px;
 }
 
-.bookmark-icon-header {
+.bookmark {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   margin-top: 52px;
 }

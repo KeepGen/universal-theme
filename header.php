@@ -12,9 +12,10 @@
     <div class="header-wrapper">
       <?php
         if( has_custom_logo() ){
-          the_custom_logo();
+          echo '<div class="logo">' . get_custom_logo() .
+          '<span class="logo-name">' . get_bloginfo('name') . '</span></div>';
         } else {
-          echo 'universal';
+          echo '<span class="logo-name">' . get_bloginfo('name') . '</span>';
         }
       ?>
       <?php
