@@ -165,74 +165,71 @@
             // Поделиться в соцсетях
             meks_ess_share();
          ?>
-
-         <section class="similar-posts">
-                     
-            <div class="container">
-               <div class="similar-posts-wrapper">
-                  <!-- Секция с одним похожими постами -->
-                  <?php		
-                     global $post;
-
-                     $query = new WP_Query( [
-                        'posts_per_page' => 4,
-                        'category_name'  => 'web-design',
-                        'post__not_in'   => array(get_the_ID(4))
-                     ] );
-
-                     if ( $query->have_posts() ) {
-                        while ( $query->have_posts() ) {
-                           $query->the_post();
-                  ?>
-                     <a href="<?php the_permalink() ?>" class="similar-posts-item">
-                        <img src="<?php
-                           if( has_post_thumbnail() ) {
-                              echo get_the_post_thumbnail_url();
-                           }
-                           else {
-                              echo get_template_directory_uri() .'/assets/images/img-default.png';
-                           }
-                        ?>" alt="<?php the_title(); ?>" class="article-thumb">
-                        <h2 class="similar-posts-title"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...') ?></h2>
-
-                        <div class="similar-posts-reactions">
-                           <div class="likes similar-posts-views">
-                              <svg width="15" height="15" fill="#BCBFC2" class="icon likes-icon">
-                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#views"></use>
-                              </svg>
-                              <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
-                           </div>
-
-                           <div class="comments similar-posts-comments">
-                              <svg width="15" height="15" fill="#BCBFC2" class="icon comments-icon">
-                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#comment"></use>
-                              </svg>
-                              <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
-                           </div>
-                        </div>
-                        <!-- /.similar-posts-reactions -->
-                     </a>
-                     <!-- /.simillar-posts-item -->
-                  <?php 
-                        }
-                     } else {
-                        // Постов не найдено
-                     }
-
-                     wp_reset_postdata(); // Сбрасываем $post
-                  ?>
-               </div>
-               <!-- /.similar-posts-wrapper -->
-               
-            </div>
-            <!-- /.container -->
-
-         </section>
-         <!-- /.similar-posts -->
-
       </div>
       <!-- .container -->
 	</footer>
    <!-- .entry-footer -->
-
 </article>
+
+<section class="similar-posts">
+   <div class="container">
+      <div class="similar-posts-wrapper">
+         <!-- Секция с одним похожими постами -->
+         <?php		
+            global $post;
+
+            $query = new WP_Query( [
+               'posts_per_page' => 4,
+               'category_name'  => 'web-design',
+               'post__not_in'   => array(get_the_ID(4))
+            ] );
+
+            if ( $query->have_posts() ) {
+               while ( $query->have_posts() ) {
+                  $query->the_post();
+         ?>
+            <a href="<?php the_permalink() ?>" class="similar-posts-item">
+               <img src="<?php
+                  if( has_post_thumbnail() ) {
+                     echo get_the_post_thumbnail_url();
+                  }
+                  else {
+                     echo get_template_directory_uri() .'/assets/images/img-default.png';
+                  }
+               ?>" alt="<?php the_title(); ?>" class="article-thumb">
+               <h2 class="similar-posts-title"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...') ?></h2>
+
+               <div class="similar-posts-reactions">
+                  <div class="likes similar-posts-views">
+                     <svg width="15" height="15" fill="#BCBFC2" class="icon likes-icon">
+                        <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#views"></use>
+                     </svg>
+                     <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
+                  </div>
+
+                  <div class="comments similar-posts-comments">
+                     <svg width="15" height="15" fill="#BCBFC2" class="icon comments-icon">
+                        <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#comment"></use>
+                     </svg>
+                     <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
+                  </div>
+               </div>
+               <!-- /.similar-posts-reactions -->
+            </a>
+            <!-- /.simillar-posts-item -->
+         <?php 
+               }
+            } else {
+               // Постов не найдено
+            }
+
+            wp_reset_postdata(); // Сбрасываем $post
+         ?>
+      </div>
+      <!-- /.similar-posts-wrapper -->
+      
+   </div>
+   <!-- /.container -->
+
+</section>
+<!-- /.similar-posts -->
