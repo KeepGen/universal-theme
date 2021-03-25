@@ -326,66 +326,71 @@
 
 <div class="container">
    <div class="latest-articles">
-      <div class="latest-articles-main">
-         <?php
-            global $post;
-            $myposts = get_posts([ 
-               'numberposts' => 6,
-               'category_name'    => 'hot, opinions, news, specials',
-            ]);
-            if( $myposts ){
-               foreach( $myposts as $post ){
-                  setup_postdata( $post );
-         ?>
-         <ul class="post-list">
-            <li class="post">
-               <a href="<?php the_permalink() ?>" class="latest-article-permalink">
-                  <img src="<?php
-                  if( has_post_thumbnail() ) {
-                     echo get_the_post_thumbnail_url();
-                  }
-                  else {
-                     echo get_template_directory_uri() .'/assets/images/img-default.png';
-                  }
-                   ?>" alt="<?php the_title(); ?>" class="article-thumb">
-                  <div class="post-info">
-                     <div class="category-bookmark">
-                        <span class="category-name"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
-                        <img src="<?php echo get_template_directory_uri( ) . '/assets/images/bookmark.svg' ?>" alt="icon: bookmark" class="bookmark-icon" class="bookmark">   
-                     </div>
-                     <!-- /.category-bookmark -->
-                     <h4 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 65, '...') ?></h4>
-                     <div class="post-preview"><?php echo mb_strimwidth(get_the_excerpt(), 0, 190, '...') ?></div>
-                     <div class="post-details">
-                        <span class="date"><?php the_time('j F'); ?></span>
-                        <div class="comments">
-                           <svg width="19" height="15" fill="#BCBFC2" class="icon comments-icon">
-                              <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#comment"></use>
-                           </svg>
-                           <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
+      <div class="latest-articles-wrapper">
+         <div class="latest-articles-main">
+            <ul class="post-list">
+               <?php
+                  global $post;
+                  $myposts = get_posts([ 
+                     'numberposts'    => 6,
+                     'category_name'  => 'hot, opinions, news, specials',
+                  ]);
+                  if( $myposts ){
+                     foreach( $myposts as $post ){
+                        setup_postdata( $post );
+               ?>
+            
+               <li class="post">
+                  <a href="<?php the_permalink() ?>" class="latest-article-permalink">
+                     <img src="<?php
+                     if( has_post_thumbnail() ) {
+                        echo get_the_post_thumbnail_url();
+                     }
+                     else {
+                        echo get_template_directory_uri() .'/assets/images/img-default.png';
+                     }
+                     ?>" alt="<?php the_title(); ?>" class="article-thumb">
+                     <div class="post-info">
+                        <div class="category-bookmark">
+                           <span class="category-name"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
+                           <img src="<?php echo get_template_directory_uri( ) . '/assets/images/bookmark.svg' ?>" alt="icon: bookmark" class="bookmark-icon" class="bookmark">   
                         </div>
+                        <!-- /.category-bookmark -->
+                        <h4 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 65, '...') ?></h4>
+                        <div class="post-preview"><?php echo mb_strimwidth(get_the_excerpt(), 0, 190, '...') ?></div>
+                        <div class="post-details">
+                           <span class="date"><?php the_time('j F'); ?></span>
+                           <div class="comments">
+                              <svg width="19" height="15" fill="#BCBFC2" class="icon comments-icon">
+                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#comment"></use>
+                              </svg>
+                              <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
+                           </div>
 
-                        <div class="likes">
-                           <img src="<?php echo get_template_directory_uri() . '/assets/images/heart-grey.svg' ?>" alt="icon: like" class="likes-icon">
-                           <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
+                           <div class="likes">
+                              <img src="<?php echo get_template_directory_uri() . '/assets/images/heart-grey.svg' ?>" alt="icon: like" class="likes-icon">
+                              <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
+                           </div>
                         </div>
+                        <!-- /.post-details -->
                      </div>
-                     <!-- /.post-details -->
-                  </div>
-                  <!-- /.post-info -->
-               </a>
-            </li>
-         </ul>
-         <!-- /.post-list -->
-         <?php 
-               }
-            } else {
-               // Постов не найдено
-            }
-            wp_reset_postdata(); // Сбрасываем $post
-         ?>
+                     <!-- /.post-info -->
+                  </a>
+               </li>
+               
+               <?php 
+                     }
+                  } else {
+                     // Постов не найдено
+                  }
+                  wp_reset_postdata(); // Сбрасываем $post
+               ?>
+            </ul>
+            <!-- /.post-list -->
+         </div>
+         <!-- /.latest-articles-main -->
       </div>
-      <!-- /.latest-articles-main -->
+      <!-- /.last-articles-wrapper -->
 
       <!-- Подключаем верхний сайдбар -->
       <?php get_sidebar('home-bottom'); ?>
