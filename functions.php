@@ -83,8 +83,19 @@ function universal_theme_widgets_init() {
 		array(
 			'name'          => esc_html__( 'Текст в подвале', 'universal-theme' ),
 			'id'            => 'sidebar-footer-text',
-			'description'   => esc_html__( 'Добавьте текст сюда.', 'universal-theme' ),
+			'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-theme' ),
 			'before_widget' => '<section id="%1$s" class="footer-text %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Виджет на странице поиска', 'universal-theme' ),
+			'id'            => 'sidebar-search',
+			'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-theme' ),
+			'before_widget' => '<section id="%1$s" class="search-text %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '',
 			'after_title'   => '',

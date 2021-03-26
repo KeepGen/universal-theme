@@ -54,13 +54,15 @@
             </div>
             <!-- /.latest-articles-main -->
 
-            <?php
-            $args = array (
-               'prev_text' => '<div class="grey-icons">&larr;</div> Назад',
-               'next_text' => 'Вперед <div class="grey-icons">&rarr;</div>',
-            );
-            the_posts_pagination( $args ) ?>
-         </div>
+            <div class="pagination-wrapper">
+            </div>
+               <?php
+               $args = array (
+                  'prev_text' => '<div class="grey-icons">&larr;</div> Назад',
+                  'next_text' => 'Вперед <div class="grey-icons">&rarr;</div>',
+               );
+               the_posts_pagination( $args ) ?>
+            </div>
          <!-- /.latest-articles-wrapper -->
 
          <!-- Подключаем верхний сайдбар -->

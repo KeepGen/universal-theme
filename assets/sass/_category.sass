@@ -1,0 +1,86 @@
+.category
+   &-title
+      font-family: Roboto Slab
+      font-size: 40px
+      line-height: 50px
+      color: #262D33
+      margin-top: 20px
+      margin-bottom: 58px
+.post
+   &-list
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 70px
+   &-card
+      background: #FFFFFF
+      border-radius: 10px
+      overflow: hidden
+      width: 23%
+      margin-bottom: 30px
+      &:not(:nth-child(4n))
+         margin-right: 2%
+      &:hover
+         //background: #fcfcfc
+         box-shadow: 1px 1px 10px rgba(#232D33, 0.25)
+      &-permalink
+         text-decoration: none
+      &-thumb
+         height: 180px
+         width: 100%
+         object-fit: cover
+      &-text
+         padding: 15px 25px 25px 25px
+         p
+            font-size: 14px
+            line-height: 20px
+            margin-bottom: 14px
+         h2
+            margin-top: 0
+      &-title
+         font-family: Roboto Slab
+         font-style: normal
+         font-weight: bold
+         font-size: 16px
+         line-height: 25px
+         color: #262D33
+         margin-bottom: 5px
+      .author
+         display: flex
+         align-items: center
+         &-avatar
+            width: 45px
+            height: 45px
+            border-radius: 50%
+         &-info
+            display: flex
+            flex-wrap: wrap
+            margin-left: 10px
+            color: #939699
+         &-name
+            width: 100%
+            color: #4B5157
+      &-excerpt
+         color: #262D33
+      .date
+         font-size: 12px
+         line-height: 15px
+      .comments, .likes
+         margin-left: 10px
+         font-size: 12px
+         line-height: 15px
+         display: flex
+         align-items: center
+@media screen and ( max-width: 1200px )
+   .post
+      &-card
+         width: 29%
+         margin-right: 2%
+         margin-left: 2%
+@media screen and ( max-width: 1024px )
+   .post
+      &-card
+         width: 45%
+@media screen and ( max-width: 576px )
+   .post
+      &-card
+         width: 100%

@@ -2650,6 +2650,16 @@ body {
   color: #262D33;
 }
 
+.search-text {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pagination {
+  width: 100%;
+}
+
 .pagination .nav-links {
   margin-top: 40px;
   background-color: #ffffff;
@@ -2745,4 +2755,145 @@ body {
   padding: 0;
   margin: 0;
   fill: #BCBFC2;
+}
+
+.category-title {
+  font-family: Roboto Slab;
+  font-size: 40px;
+  line-height: 50px;
+  color: #262D33;
+  margin-top: 20px;
+  margin-bottom: 58px;
+}
+
+.post-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.post-card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 23%;
+  margin-bottom: 30px;
+}
+
+.post-card:not(:nth-child(4n)) {
+  margin-right: 2%;
+}
+
+.post-card:hover {
+  -webkit-box-shadow: 1px 1px 10px rgba(35, 45, 51, 0.25);
+          box-shadow: 1px 1px 10px rgba(35, 45, 51, 0.25);
+}
+
+.post-card-permalink {
+  text-decoration: none;
+}
+
+.post-card-thumb {
+  height: 180px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-card-text {
+  padding: 15px 25px 25px 25px;
+}
+
+.post-card-text p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+
+.post-card-text h2 {
+  margin-top: 0;
+}
+
+.post-card-title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262D33;
+  margin-bottom: 5px;
+}
+
+.post-card .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-card .author-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.post-card .author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 10px;
+  color: #939699;
+}
+
+.post-card .author-name {
+  width: 100%;
+  color: #4B5157;
+}
+
+.post-card-excerpt {
+  color: #262D33;
+}
+
+.post-card .date {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.post-card .comments, .post-card .likes {
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .post-card {
+    width: 29%;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .post-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .post-card {
+    width: 100%;
+  }
 }
