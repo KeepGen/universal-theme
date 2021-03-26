@@ -2015,12 +2015,26 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .footer-nav-wrapper {
+    margin-left: 10px;
+  }
 }
 
 @media screen and (max-width: 960px) {
   .footer-form-title {
     font-size: 30px;
     text-align: center;
+  }
+  .footer-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-nav-wrapper {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 
