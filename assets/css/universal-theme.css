@@ -1403,7 +1403,7 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  .latest-articles-main {
+  .latest-articles-wrapper {
     width: 70%;
     margin-right: 30px;
   }
@@ -1429,9 +1429,9 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .latest-articles-main {
+  .latest-articles-wrapper {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 
