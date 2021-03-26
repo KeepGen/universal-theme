@@ -6,7 +6,7 @@
           <div></div>
         <?php  } else { ?>
           <div class="footer-form-wrapper">
-            <h3 class="footer-form-title">Подпишитесь на нашу рассылку</h3>
+            <h3 class="footer-form-title">Подпишитесь на нашу&nbsp;рассылку</h3>
             <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="footer-form">
               <!-- Поле Email (обязательно) -->
               <input required type="text" name="email" placeholder="Введите email" class="input footer-form-input"/>
