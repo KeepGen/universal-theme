@@ -1,7 +1,7 @@
 <?php get_header(); ?>
    <div class="container">
 
-      <h1 class="search-title">Результаты поиска по запросу:</h1>
+      <h1 class="search-title">Результаты поиска по&nbsp;запросу:</h1>
       <div class="latest-articles">
          <div class="latest-articles-wrapper">
             <div class="latest-articles-main">
