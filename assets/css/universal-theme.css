@@ -2950,3 +2950,83 @@ body {
     width: 100%;
   }
 }
+
+.section-dark {
+  background: #262D33;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 122px;
+}
+
+.page-title {
+  font-family: Roboto Slab;
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
+.page-text {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts-form {
+  max-width: 460px;
+}
+
+.contacts-form input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 10px;
+}
+
+.contacts-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 20px;
+  min-height: 120px;
+  resize: none;
+}
+
+.wpcf7-form {
+  max-width: 460px;
+}
+
+.wpcf7-form input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 10px;
+}
+
+.wpcf7-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 20px;
+  min-height: 120px;
+  resize: none;
+}
