@@ -2988,6 +2988,12 @@ body {
   line-height: 30px;
 }
 
+.contacts-title {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
 .contacts-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2995,9 +3001,24 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.contacts-wrapper .left {
+  margin-right: 80px;
+}
+
+.contacts-wrapper .right {
+  width: 48%;
+}
+
+.contacts-wrapper .right a, .contacts-wrapper .right address {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: normal;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contacts-form {
@@ -3021,11 +3042,13 @@ body {
   color: #939699;
   margin-bottom: 20px;
   min-height: 120px;
+  width: 460px;
   resize: none;
 }
 
 .wpcf7-form {
-  max-width: 460px;
+  width: 460px;
+  min-height: 120px;
 }
 
 .wpcf7-form input {
