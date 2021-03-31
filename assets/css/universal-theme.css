@@ -3075,3 +3075,16 @@ body {
   padding: 80px 0;
   color: #ffffff;
 }
+
+.taxonomy-list {
+  margin-top: 15px;
+}
+
+.taxonomy-list a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.taxonomy-list a:hover {
+  color: white;
+}

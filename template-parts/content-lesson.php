@@ -33,8 +33,6 @@
                   };
                ?>
             </div>
-
-
                
             <div class="lesson-header-title-wrapper">
                <?php
@@ -57,6 +55,14 @@
 
             </div>
             <!-- /.post-header-info -->
+
+            <div class="taxonomy-list">
+               Метки урока: <?php the_terms(get_the_ID(), 'genre', '', ', ', ''); ?>
+            </div>
+
+            <div class="taxonomy-list">
+               Преподаватель: <?php the_terms(get_the_ID(), 'teacher', '', ' / ', ''); ?>
+            </div>
          </div>
          <!-- /.post-header-wrapper -->
 
@@ -170,7 +176,7 @@
          ?>
       </div>
       <!-- /.similar-posts-wrapper -->
-      
+
    </div>
    <!-- /.container -->
 
