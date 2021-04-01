@@ -10,7 +10,7 @@
          } ?>)">
          
 		<div class="container">
-         
+
          <div class="post-header-wrapper">
             <div class="post-header-nav">
                <?php

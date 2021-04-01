@@ -65,7 +65,7 @@
    </div>
    <!-- /.posts-list -->
    
-   <h1>taxonomy-the_genre-html.php</h1>
+   <h1>lesson-the_genre-html.php</h1>
 
 </div>
 <!-- /.container -->

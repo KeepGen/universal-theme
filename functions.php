@@ -682,3 +682,32 @@ function plural_form($number, $after) {
 	$cases = array (2, 0, 1, 1, 1, 2);
 	echo $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
 }
+
+// Подключение хлебных крошек с отображением Категории (Category) и встроенным переводом
+function breadcrumbs($separator = ' <span class="breadcrumbs-separator">&#8250;</span> ', $home = 'Главная') {
+
+    $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
+    $base_url =  (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+	 $breadcrumbs = array("<a class='breadcrumbs-item' href=\"$base_url\">$home</a>");
+
+	 $keys = array_keys($path);
+	 $last = end($keys);
+
+    foreach( $path as $x => $crumb ){
+        $title = ucwords(str_replace(array('.php', '_'), Array('', ' '), $crumb));
+        if ($title == 'Category'){
+            $title = 'Категории';
+			}
+			if ($title == 'Web-design'){
+				$title = 'Web Design';
+			}
+        if( $x != $last ){
+            $breadcrumbs[] = '<a class="breadcrumbs-item" href="'.$base_url.$crumb.'">'.$title.'</a>';
+        }
+        else {
+            $breadcrumbs[] = $title;
+        }
+    }
+
+    return implode( $separator, $breadcrumbs );
+}

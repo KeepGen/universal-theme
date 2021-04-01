@@ -3088,3 +3088,26 @@ body {
 .taxonomy-list a:hover {
   color: white;
 }
+
+.breadcrumbs {
+  margin-top: 50px;
+  color: #262D33;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.breadcrumbs-separator {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #BCBFC2;
+  font-size: 20px;
+}
+
+.breadcrumbs-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.breadcrumbs-item:visited {
+  color: inherit;
+}

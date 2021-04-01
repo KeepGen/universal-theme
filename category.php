@@ -2,6 +2,10 @@
 
    <div class="container">
 
+      <div class="breadcrumbs">
+         <?php echo breadcrumbs(); ?>
+      </div>
+
       <h1 class="category-title">
          <?php single_cat_title() ?>
       </h1>
