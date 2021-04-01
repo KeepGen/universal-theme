@@ -57,11 +57,11 @@
             <!-- /.post-header-info -->
 
             <div class="taxonomy-list">
-               Метки урока: <?php the_terms(get_the_ID(), 'genre', '', ', ', ''); ?>
+               <?php _e( 'Lesson tags: ', 'universal' ) . the_terms(get_the_ID(), 'genre', '', ', ', ''); ?>
             </div>
 
             <div class="taxonomy-list">
-               Преподаватель: <?php the_terms(get_the_ID(), 'teacher', '', ' / ', ''); ?>
+               <?php _e( 'Teacher(s): ', 'universal' ) . the_terms(get_the_ID(), 'teacher', '', ' / ', ''); ?>
             </div>
          </div>
          <!-- /.post-header-wrapper -->
@@ -79,7 +79,7 @@
                sprintf(
                   wp_kses(
                      /* translators: %s: Name of current post. Only visible to screen readers */
-                     __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
+                     __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal' ),
                      array(
                         'span' => array(
                            'class' => array(),
@@ -92,7 +92,7 @@
 
             wp_link_pages(
                array(
-                  'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
+                  'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'universal' ),
                   'after'  => '</div>',
                )
             );
@@ -105,10 +105,10 @@
    <footer class="entry-footer">
       <div class="container">
          <?php
-            $tags_list = get_the_tag_list( '', esc_html_x('', 'list item separator', 'universal-theme' ) );
+            $tags_list = get_the_tag_list( '', esc_html_x('', 'list item separator', 'universal' ) );
             if ( $tags_list ) {
                /* translators: 1: list of tags. */
-               printf( '<span class="tags-links">' . esc_html__('%1$s', 'universal-theme' ) . '</span>', $tags_list ); // phpcs:ignore Wordpress. Security.EscapeOutput.OutputNotEscaped
+               printf( '<span class="tags-links">' . esc_html__('%1$s', 'universal' ) . '</span>', $tags_list ); // phpcs:ignore Wordpress. Security.EscapeOutput.OutputNotEscaped
             }
 
             // Поделиться в соцсетях

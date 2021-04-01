@@ -29,7 +29,7 @@
                   <svg width="18" height="17" fill="#BCBFC2" class="icon comments-icon">
                      <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#home"></use>
                   </svg>
-                  На главную
+                  <?php _e( 'To Home', 'universal') ?>
                </a>
                
                <?php
@@ -40,9 +40,9 @@
                            <svg width="15" height="7" fill="#000000" class="icon prev-icon">
                               <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#left-arrow"></use>
                            </svg>
-                        ' . esc_html__( 'Назад', 'universal-theme' ) . '</span>' ,
+                        ' . esc_html__( 'Previous', 'universal-theme' ) . '</span>' ,
                         'next_text' => '<span class="post-nav-next">
-                        ' . esc_html__( 'Вперед', 'universal-theme' ) . '
+                        ' . esc_html__( 'Next', 'universal-theme' ) . '
                            <svg width="15" height="7" fill="#000000" class="icon next-icon">
                               <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#right-arrow"></use>
                            </svg>
@@ -100,17 +100,17 @@
                   <?php $author_id = get_the_author_meta('ID'); ?>
                   <img src="<?php echo get_avatar_url($author_id) ?>" alt="<?php the_author(); ?>" class="post-author-avatar">
                   <span class="post-author-name"><?php the_author(); ?></span>
-                  <span class="post-author-rank">Должность</span>
+                  <span class="post-author-rank"><?php _e( 'Position', 'universal') ?></span>
                   <span class="post-author-posts">
                      <?php plural_form(count_user_posts($author_id),
                      /* варианты написания для количества 1, 2, 5 */
-                     array('статья','статьи','статей')) ?>
+                     array(__( 'article', 'universal'), __( 'articles', 'universal'), __( '5articles', 'universal'))) ?>
                   </span>
                </div>
                <!-- /.post-author-info -->
 
                <a href="<?php echo get_author_posts_url($author_id); ?>" class="post-author-link">
-                  Сайт автора
+                  <?php _e( 'Author Website ', 'universal') ?>
                </a>
             </div>
             <!-- /.post-author -->
@@ -130,7 +130,7 @@
                sprintf(
                   wp_kses(
                      /* translators: %s: Name of current post. Only visible to screen readers */
-                     __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
+                     __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal' ),
                      array(
                         'span' => array(
                            'class' => array(),
@@ -143,7 +143,7 @@
 
             wp_link_pages(
                array(
-                  'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
+                  'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'universal' ),
                   'after'  => '</div>',
                )
             );
@@ -156,10 +156,10 @@
    <footer class="entry-footer">
       <div class="container">
          <?php
-            $tags_list = get_the_tag_list( '', esc_html_x('', 'list item separator', 'universal-theme' ) );
+            $tags_list = get_the_tag_list( '', esc_html_x('', 'list item separator', 'universal' ) );
             if ( $tags_list ) {
                /* translators: 1: list of tags. */
-               printf( '<span class="tags-links">' . esc_html__('%1$s', 'universal-theme' ) . '</span>', $tags_list ); // phpcs:ignore Wordpress. Security.EscapeOutput.OutputNotEscaped
+               printf( '<span class="tags-links">' . esc_html__('%1$s', 'universal' ) . '</span>', $tags_list ); // phpcs:ignore Wordpress. Security.EscapeOutput.OutputNotEscaped
             }
 
             // Поделиться в соцсетях

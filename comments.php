@@ -68,13 +68,13 @@
                   ); ?>
                </a>
 
-               <?php edit_comment_link( __( '(Изменить)' ), '  ', '' ); ?>
+               <?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
             </span>
          </div>
 
          <?php if ( $comment->comment_approved == '0' ) { ?>
             <em class="comment-awaiting-moderation">
-               <?php _e( 'Ваш комментарий ожидает проверки' ); ?>
+               <?php _e( 'Your comment us awathing moderation.', 'universal' ); ?>
             </em><br/>
          <?php } ?>
 
@@ -126,7 +126,7 @@ if ( post_password_required() ) {
             <svg width="18" height="18" fill="#BCBFC2" class="icon comments-add-icon">
                <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#pencil"></use>
             </svg>
-            Добавить комментарий</a>
+            <?php _e( 'Add a comment', 'universal' )?></a>
          </div>
          <!-- /.comments-header -->
 
@@ -142,7 +142,7 @@ if ( post_password_required() ) {
                   'short_ping' => true,
                   'avatar_size'=> 75,
                   'callback'   => 'universal_theme_comment',
-                  'login_text' => 'Зарегистрируйтесь, если хотите прокомментировать',
+                  'login_text' => _e( 'Sign in to write a comment, please', 'universal' ),
                )
             );
             ?>
@@ -154,7 +154,7 @@ if ( post_password_required() ) {
          // If comments are closed and there are comments, let's leave a little note, shall we?
          if ( ! comments_open() ) :
             ?>
-            <p class="no-comments"><?php esc_html_e( 'Комментарии к этой записи закрыты.', 'universal-theme' ); ?></p>
+            <p class="no-comments"><?php esc_html_e( 'Comments are closed for this post.', 'universal' ); ?></p>
             <?php
          endif;
 
@@ -166,7 +166,7 @@ if ( post_password_required() ) {
 
       comment_form(array(
          'comment_field' => '<div class="comment-form-comment">
-            <label class="comment-label" for="comment">' . _x( 'Что вы думаете на этот счет?', 'noun' ) . '</label>
+            <label class="comment-label" for="comment">' . _x( 'What do you think about this?', 'universal' ) . '</label>
             <div class="comment-wrapper">
                ' . get_avatar(get_current_user_id(), 75) . '
                <div class="comment-textarea-wrapper">
@@ -184,7 +184,7 @@ if ( post_password_required() ) {
             ( $req ? $required_text : '' ) . '
          </p>',
          'class_submit'         => 'comment-submit more',
-         'label_submit'         => 'Отправить',
+         'label_submit'         => __( 'Send comment', 'universal' ),
          'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
          'title_reply'          => '',
       ));
