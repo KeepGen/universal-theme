@@ -564,7 +564,7 @@ class Recent_Post_Widget extends WP_Widget {
 						<h4 class="recent-post-title"><?php echo mb_strimwidth(get_the_title(), 0, 35, '...') ?></h4>
 						<span class="recent-post-time">
 							<?php $time_diff = human_time_diff( get_post_time('U'), current_time('timestamp') );
-							echo " $time_diff назад"; ?>
+							echo " $time_diff "; ?><?php _e( 'ago', 'universal'); ?>
 						</span>
 					</div>
 				</a>

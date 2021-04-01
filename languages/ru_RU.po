@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2021-04-02 00:14+0300\n"
+"POT-Creation-Date: 2021-04-02 00:40+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: WeTeam\n"
@@ -67,6 +67,46 @@ msgstr "Ваш email не будет опубликован."
 #: comments.php:187
 msgid "Send comment"
 msgstr "Отправить"
+
+#: contacts.php:15
+msgid "Contact us directly:"
+msgstr "Через форму обратной связи:"
+
+#: contacts.php:26
+msgid "Also you can use this contacts:"
+msgstr "Или по этим данным:"
+
+#: footer.php:9
+msgid "Subscribe to our newsletter"
+msgstr "Подпишитесь на нашу рассылу"
+
+#: footer.php:12
+msgid "Enter your email"
+msgstr "Введите email"
+
+#: footer.php:21
+msgid "Subscribe"
+msgstr "Подпишись"
+
+#: front-page.php:28 front-page.php:450 template-parts/content.php:103
+msgid "Position"
+msgstr "Должность"
+
+#: front-page.php:43 front-page.php:313 front-page.php:518
+msgid "Read more"
+msgstr "Читать далее"
+
+#: front-page.php:48 front-page.php:93 front-page.php:139
+msgid "No posts"
+msgstr "Постов нет"
+
+#: front-page.php:56
+msgid "Recommend"
+msgstr "Рекомендуем"
+
+#: front-page.php:458
+msgid "Watch photo"
+msgstr "Смотреть фото"
 
 #: functions.php:35 functions.php:46
 msgid "Lessons"
@@ -312,6 +352,10 @@ msgstr "Недавно опубликовано"
 msgid "Recent posts"
 msgstr "ПОследние посты"
 
+#: functions.php:567
+msgid "ago"
+msgstr "назад"
+
 #: functions.php:594
 msgid "Posts quantity:"
 msgstr "Количество постов:"
@@ -354,10 +398,6 @@ msgstr "Назад"
 msgid "Next"
 msgstr "Вперед"
 
-#: template-parts/content.php:103
-msgid "Position"
-msgstr "Должность"
-
 #: template-parts/content.php:107
 msgid "article"
 msgstr "статья"
@@ -366,10 +406,9 @@ msgstr "статья"
 msgid "articles"
 msgstr "статьи"
 
-#: template-parts/content.php:107
-msgid "5articles"
-msgstr "статей"
-
 #: template-parts/content.php:113
 msgid "Author Website "
 msgstr "Сайт автора "
+
+#~ msgid "5articles"
+#~ msgstr "статей"

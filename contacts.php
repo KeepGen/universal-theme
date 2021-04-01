@@ -12,7 +12,7 @@ get_header();
       <?php the_title('<h1 class="page-title">', '</h1>', true); ?>
       <div class="contacts-wrapper">
          <div class="left">
-            <h2 class="contacts-title">Через форму обратной связи</h2>
+            <h2 class="contacts-title"><?php _e( 'Contact us directly:', 'universal'); ?></h2>
             <!-- <form action="form.php" class="contacts-form" method="POST">
                <input name="contact_name" type="text" class="input contacts-input" placeholder="Ваше имя">
                <input name="contact_email" type="email" class="input contacts-input" placeholder="Ваш Email">
@@ -23,7 +23,7 @@ get_header();
          </div>
          <!-- /.left -->
          <div class="right">
-             <h2 class="contacts-title">Или по этим данным:</h2>
+             <h2 class="contacts-title"><?php _e( 'Also you can use this contacts:', 'universal'); ?></h2>
              <a href="mailto:<?php the_field('email') ?>"><?php echo the_field('email') ?></a>
              <address><?php echo the_field('address') ?></address>
              <a href="tel:<?php the_field('phone') ?>"><?php echo the_field('phone') ?></a>

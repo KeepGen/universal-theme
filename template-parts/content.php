@@ -104,7 +104,7 @@
                   <span class="post-author-posts">
                      <?php plural_form(count_user_posts($author_id),
                      /* варианты написания для количества 1, 2, 5 */
-                     array(__( 'article', 'universal'), __( 'articles', 'universal'), __( '5articles', 'universal'))) ?>
+                     array(__( 'article', 'universal'), __( 'articles', 'universal'), __( 'articles', 'universal'))) ?>
                   </span>
                </div>
                <!-- /.post-author-info -->

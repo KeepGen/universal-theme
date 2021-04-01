@@ -25,7 +25,7 @@
                <img src="<?php echo get_avatar_url($author_id) ?>" alt="<?php the_author(); ?>" class="avatar">
                <div class="author-bio">
                   <span class="author-name"><?php the_author(); ?></span>
-                  <span class="author-rank">Должность</span>
+                  <span class="author-rank"><?php _e( 'Position', 'universal' ) ?> </span>
                </div>
             </a>
             <div class="post-text">
@@ -40,12 +40,12 @@
                   }
                ?>
                <h2 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 41, '...') ?></h2>
-               <a href="<?php echo get_the_permalink() ?>" class="more">Читать далее</a>
+               <a href="<?php echo get_the_permalink() ?>" class="more"><?php _e( 'Read more', 'universal' ) ?></a>
             </div>
             <?php 
                   }
                } else {
-                  ?><p>Постов нет</p><?php
+                  ?><p><?php _e( 'No posts', 'universal' ) ?></p><?php
                }
 
                wp_reset_postdata(); // Сбрасываем $post
@@ -53,7 +53,7 @@
          </div>
          <!-- /.left -->
          <div class="right">
-            <h3 class="recommend">Рекомендуем</h3>
+            <h3 class="recommend"><?php _e( 'Recommend', 'universal' ) ?></h3>
             <ul class="posts-list">
                <?php
                   // Announcing global variable
@@ -90,7 +90,7 @@
                <?php 
                      }
                   } else {
-                     ?><p>Постов нет</p><?php
+                     ?><p><?php _e( 'No posts', 'universal' ) ?></p><?php
                   }
 
                   wp_reset_postdata(); // Сбрасываем $post
@@ -136,7 +136,7 @@
       <?php 
             }
          } else {
-            ?><p>Постов нет</p><?php
+            ?><p><?php _e( 'No posts', 'universal' ) ?></p><?php
          }
          wp_reset_postdata(); // Сбрасываем $post
       ?>
@@ -310,7 +310,7 @@
             }?>) no-repeat center center">
             <div class="container">
                <h2 class="investigation-title"><?php the_title(); ?></h2>
-               <a href="<?php echo get_the_permalink() ?>" class="more">Читать статью</a>
+               <a href="<?php echo get_the_permalink() ?>" class="more"><?php _e( 'Read more', 'universal' ) ?></a>
             </div>
          </section>
 
@@ -447,7 +447,7 @@
                         <img src="<?php echo get_avatar_url($author_id) ?>" alt="<?php the_author(); ?>" class="author-avatar">
                         <div class="author-bio">
                            <span class="author-name"><?php the_author(); ?></span>
-                           <span class="author-rank">Должность</span>
+                           <span class="author-rank"><?php _e( 'Position', 'universal' ) ?></span>
                         </div>
                      </a>
                      <h3 class="photo-report-title"><?php the_title(); ?></h3>
@@ -455,7 +455,7 @@
                         <svg width="19" height="15" class="icon photo-report-icon">
                            <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#images"></use>
                         </svg>
-                        Смотреть фото
+                        <?php _e( 'Watch photo', 'universal' ) ?>
                         <span class="photo-report-counter"><?php echo count($images)?></span>
                      </a>
                   </div>
@@ -515,7 +515,7 @@
                                     <p class="career-grid-excerpt">
                                        <?php echo mb_strimwidth(get_the_excerpt(), 0, 170, '...') ?>
                                     </p>
-                                    <a href="<?php echo get_the_permalink() ?>" class="more">Читать далее</a>
+                                    <a href="<?php echo get_the_permalink() ?>" class="more"><?php _e( 'Read more', 'universal' ) ?></a>
                                  </li>
                               <?php 
                            break;
