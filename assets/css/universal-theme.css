@@ -842,7 +842,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 25px;
+  padding: 20px;
 }
 
 .article-grid-item-2 .article-grid-title {
