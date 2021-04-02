@@ -181,7 +181,18 @@
                         ?>
                            <li class="article-grid-item article-grid-item-1">
                               <a href="<?php the_permalink() ?>" class="article-grid-permalink">
-                                 <span class="category-name"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
+                                 <span class="category-name">
+                                    <?php
+                                       foreach (get_the_category() as $category ) {
+                                          printf(
+                                             '<a href="%s" class="category-link %s">%s</a>',
+                                             esc_url ( get_category_link($category) ),
+                                             esc_html ( $category -> slug ),
+                                             esc_html ( $category -> name ),
+                                          );
+                                       }
+                                    ?>
+                                 </span>
                                  <h4 class="article-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 55, '...') ?></h4>
                                  <p class="article-grid-excerpt">
                                     <?php echo mb_strimwidth(get_the_excerpt(), 0, 170, '...') ?>
@@ -354,21 +365,33 @@
                ?>
             
                <li class="post">
-                  <a href="<?php the_permalink() ?>" class="latest-article-permalink">
-                     <img src="<?php
-                     if( has_post_thumbnail() ) {
-                        echo get_the_post_thumbnail_url();
-                     }
-                     else {
-                        echo get_template_directory_uri() .'/assets/images/img-default.png';
-                     }
-                     ?>" alt="<?php the_title(); ?>" class="article-thumb">
-                     <div class="post-info">
-                        <div class="category-bookmark">
-                           <span class="category-name"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
-                           <img src="<?php echo get_template_directory_uri( ) . '/assets/images/bookmark.svg' ?>" alt="icon: bookmark" class="bookmark-icon" class="bookmark">   
-                        </div>
-                        <!-- /.category-bookmark -->
+                  <img src="<?php
+                  if( has_post_thumbnail() ) {
+                     echo get_the_post_thumbnail_url();
+                  }
+                  else {
+                     echo get_template_directory_uri() .'/assets/images/img-default.png';
+                  }
+                  ?>" alt="<?php the_title(); ?>" class="article-thumb">
+
+                  <div class="post-info">
+                     <div class="category-bookmark">
+                        <span class="category-name">
+                           <?php
+                              foreach (get_the_category() as $category ) {
+                                 printf(
+                                    '<a href="%s" class="category-link %s">%s</a>',
+                                    esc_url ( get_category_link($category) ),
+                                    esc_html ( $category -> slug ),
+                                    esc_html ( $category -> name ),
+                                 );
+                              }
+                           ?>
+                        </span>
+                        <img src="<?php echo get_template_directory_uri( ) . '/assets/images/bookmark.svg' ?>" alt="icon: bookmark" class="bookmark-icon" class="bookmark">   
+                     </div>
+                     <!-- /.category-bookmark -->
+                     <a href="<?php the_permalink() ?>" class="latest-article-permalink">
                         <h4 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 65, '...') ?></h4>
                         <div class="post-preview"><?php echo mb_strimwidth(get_the_excerpt(), 0, 190, '...') ?></div>
                         <div class="post-details">
@@ -386,9 +409,10 @@
                            </div>
                         </div>
                         <!-- /.post-details -->
-                     </div>
-                     <!-- /.post-info -->
-                  </a>
+                     </a>
+                  </div>
+                  <!-- /.post-info -->
+                  
                </li>
                
                <?php 

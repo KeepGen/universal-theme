@@ -503,6 +503,22 @@ body {
   color: #3DC47E;
 }
 
+.category-link.opinions {
+  color: #3BBDC4;
+}
+
+.category-link.hot {
+  color: #FF4F52;
+}
+
+.category-link.news {
+  color: #4592FF;
+}
+
+.category-link.specials {
+  color: #AC8EE3;
+}
+
 @media screen and (max-width: 1200px) {
   .hero .right {
     -ms-flex-preferred-size: 35%;
@@ -1334,6 +1350,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-decoration: none;
 }
 
@@ -1423,6 +1443,12 @@ body {
   .latest-articles-wrapper {
     width: 70%;
     margin-right: 30px;
+  }
+  .latest-articles .post-list .post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .latest-articles .post-list .post .latest-article-permalink {
     -webkit-box-orient: vertical;

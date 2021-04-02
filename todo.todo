@@ -6,3 +6,19 @@ Users List
 - USER 5 | unique.user5@gmaily.com | cQoCoWrmTCOYfo3TDnNUe27(
 
 Archive:
+// Old style -> show category
+################################
+<?php $category = get_the_category(); echo $category [0]->name; ?>
+
+// Colorize categories
+################################
+<?php
+   foreach (get_the_category() as $category ) {
+      printf(
+         '<a href="%s" class="category-link %s">%s</a>',
+         esc_url ( get_category_link($category) ),
+         esc_html ( $category -> slug ),
+         esc_html ( $category -> name ),
+      );
+   }
+?>
