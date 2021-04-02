@@ -249,7 +249,9 @@
                                           </div>
 
                                           <div class="likes">
-                                             <img src="<?php echo get_template_directory_uri() . '/assets/images/heart.svg' ?>" alt="icon: like" class="likes-icon">
+                                             <svg width="19" height="15" fill="#ffffff" class="icon comments-icon">
+                                                <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#heart"></use>
+                                             </svg>
                                              <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
                                           </div>
                                        </div>
@@ -388,7 +390,9 @@
                               }
                            ?>
                         </span>
-                        <img src="<?php echo get_template_directory_uri( ) . '/assets/images/bookmark.svg' ?>" alt="icon: bookmark" class="bookmark-icon" class="bookmark">   
+                        <svg width="14" height="18" fill="#BCBFC2" class="icon comments-icon">
+                           <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#bookmark"></use>
+                        </svg>
                      </div>
                      <!-- /.category-bookmark -->
                      <a href="<?php the_permalink() ?>" class="latest-article-permalink">
@@ -404,7 +408,9 @@
                            </div>
 
                            <div class="likes">
-                              <img src="<?php echo get_template_directory_uri() . '/assets/images/heart-grey.svg' ?>" alt="icon: like" class="likes-icon">
+                              <svg width="19" height="15" fill="#BCBFC2" class="icon comments-icon">
+                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#heart"></use>
+                              </svg>
                               <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
                            </div>
                         </div>

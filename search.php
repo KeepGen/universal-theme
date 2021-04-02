@@ -10,19 +10,15 @@
 
                   <li class="post">
                      <a href="<?php the_permalink() ?>" class="latest-article-permalink">
-                        <img src="<?php
-                        if( has_post_thumbnail() ) {
-                           echo get_the_post_thumbnail_url();
-                        }
-                        else {
-                           echo get_template_directory_uri() .'/assets/images/img-default.png';
-                        }
-                        ?>" alt="<?php the_title(); ?>" class="article-thumb">
+                     <img src="<?php
+                     if( has_post_thumbnail() ) {
+                        echo get_the_post_thumbnail_url();
+                     }
+                     else {
+                        echo get_template_directory_uri() .'/assets/images/img-default.png';
+                     }
+                     ?>" alt="<?php the_title(); ?>" class="article-thumb">
                         <div class="post-info">
-                           <div class="category-bookmark">
-                              <span class="category-name"><?php $category = get_the_category(); echo $category [0]->name; ?></span>
-                           </div>
-                           <!-- /.category-bookmark -->
                            <h4 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 65, '...') ?></h4>
                            <div class="post-preview"><?php echo mb_strimwidth(get_the_excerpt(), 0, 190, '...') ?></div>
                            <div class="post-details">
@@ -35,7 +31,9 @@
                               </div>
 
                               <div class="likes">
-                                 <img src="<?php echo get_template_directory_uri() . '/assets/images/heart-grey.svg' ?>" alt="icon: like" class="likes-icon">
+                                 <svg width="19" height="15" fill="#BCBFC2" class="icon comments-icon">
+                                    <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#heart"></use>
+                                 </svg>
                                  <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
                               </div>
                            </div>
