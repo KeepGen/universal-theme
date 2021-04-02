@@ -4,6 +4,21 @@ if ( ! function_exists ( 'universal_theme_setup' ) ) :
 
   function universal_theme_setup() {
 
+	// Удаляем роль при деактивации нашей темы
+	add_action( 'switch_theme', 'deactivate_universal_theme' );
+	function deactivate_universal_theme() {
+		remove_role( 'developer' );
+	}
+
+	// Добавляем роль при активации нашей темы
+	add_action( 'after_switch_theme', 'activate_universal_theme' );
+	function activate_universal_theme() {
+		$author = get_role( 'author' );
+		add_role( 'developer', 'Разработчик', $author->capabilities);
+		add_role( 'designer', 'Дизайнер', $author->capabilities);
+		add_role( 'photographer', 'Фотограф', $author->capabilities);
+	}
+
 	 // Подключение файлов перевода
 	 load_theme_textdomain( 'universal', get_template_directory() . '/languages' );
 
