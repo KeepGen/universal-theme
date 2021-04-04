@@ -120,6 +120,8 @@
    <!-- .entry-footer -->
 </article>
 
+<h1>content-lesson.php</h1>
+
 <section class="similar-posts">
    <div class="container">
       <div class="similar-posts-wrapper">

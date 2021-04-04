@@ -240,6 +240,8 @@
       </div>
       <!-- /.similar-posts-wrapper -->
       
+      <h1>content.php</h1>
+
    </div>
    <!-- /.container -->
 

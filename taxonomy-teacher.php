@@ -3,7 +3,7 @@
 <div class="container">
 
    <h1 class="category-title">
-      Результаты по метке "<?php single_cat_title() ?>" из раздела Уроки
+      Результаты по метке "<?php single_cat_title() ?>"
    </h1>
 
    <div class="post-list">
@@ -65,9 +65,9 @@
    </div>
    <!-- /.posts-list -->
    
-   <h1>taxonomy-html.php</h1>
 
 </div>
 <!-- /.container -->
 
+<h1>taxonomy-teacher.php</h1>
 <?php get_footer(); ?>

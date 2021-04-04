@@ -6,6 +6,6 @@
    <?php the_content(); ?>
 </div>
 
-<h1>page.php</h1>
+<h1>page-articles.php</h1>
 
 <?php get_footer(); ?>
