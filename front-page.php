@@ -193,10 +193,12 @@
                                        }
                                     ?>
                                  </span>
-                                 <h4 class="article-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 55, '...') ?></h4>
-                                 <p class="article-grid-excerpt">
-                                    <?php echo mb_strimwidth(get_the_excerpt(), 0, 170, '...') ?>
-                                 </p>
+                                 <a href="<?php the_permalink() ?>" class="article-grid-permalink">
+                                    <h4 class="article-grid-title"><?php echo mb_strimwidth(get_the_title(), 0, 55, '...') ?></h4>
+                                    <p class="article-grid-excerpt">
+                                       <?php echo mb_strimwidth(get_the_excerpt(), 0, 170, '...') ?>
+                                    </p>
+                                 </a>
                                  <div class="article-grid-info">
                                     <div class="author">
                                        <?php $author_id = get_the_author_meta('ID'); ?>
