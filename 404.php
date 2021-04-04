@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<div class="container">
-      <main id="primary" class="site-main">
+      <main id="primary" class="site-main page404">
 
          <section class="error-404 not-found">
             <h1 class="page404-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'universal' ); ?></h1>
