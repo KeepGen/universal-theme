@@ -58,6 +58,9 @@
                $args = array (
                   'prev_text' => '<div class="grey-icons">&larr;</div> Назад',
                   'next_text' => 'Вперед <div class="grey-icons">&rarr;</div>',
+                  'end_size'  => 0,
+                  'mid_size'  => 0,
+                  'show_all'  => false,
                );
                the_posts_pagination( $args ) ?>
             </div>

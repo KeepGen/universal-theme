@@ -2881,6 +2881,27 @@ body {
   fill: #BCBFC2;
 }
 
+@media screen and (max-width: 576px) {
+  .pagination .nav-links .page-numbers {
+    padding: 17px 20px;
+  }
+  .pagination .nav-links .current {
+    color: #4592FF;
+  }
+  .pagination .nav-links .dots {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pagination .nav-links .page-numbers {
+    padding: 20px 17px;
+  }
+  .pagination .nav-links .next .grey-icons, .pagination .nav-links .prev .grey-icons {
+    display: none;
+  }
+}
+
 .category-title {
   font-family: Roboto Slab;
   font-size: 40px;
