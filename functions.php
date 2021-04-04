@@ -8,6 +8,8 @@ if ( ! function_exists ( 'universal_theme_setup' ) ) :
 	add_action( 'switch_theme', 'deactivate_universal_theme' );
 	function deactivate_universal_theme() {
 		remove_role( 'developer' );
+		remove_role( 'designer' );
+		remove_role( 'photographer' );
 	}
 
 	// Добавляем роль при активации нашей темы
@@ -648,7 +650,7 @@ class Recent_Post_Widget extends WP_Widget {
 			return;
 		?>
 		<style type="text/css">
-			.my_widget a{ display:inline; }
+			.recent_post_widget a{ display:inline; }
 		</style>
 		<?php
 	}
