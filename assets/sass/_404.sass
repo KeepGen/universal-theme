@@ -10,3 +10,21 @@
       font-size: 14px
       line-height: 20px
       margin-bottom: 14px
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      .widget_recent_entries, .widget_categories, .widget_archive
+         flex-basis: 32%
+         //margin-right: 15px
+      .widget_tag_cloud
+         flex-basis: 100%
+@media screen and ( max-width: 1024px )
+   .page404
+      &-content
+         .widget
+            flex-basis: 48%
+@media screen and ( max-width: 768px )
+   .page404
+      &-content
+         .widget
+            flex-basis: 100%
