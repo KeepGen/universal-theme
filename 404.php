@@ -16,12 +16,13 @@ get_header();
          <section class="error-404 not-found">
             <h1 class="page404-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'universal' ); ?></h1>
 
+            <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'universal' ); ?></p>
+
             <div class="page404-content">
-               <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'universal' ); ?></p>
 
                <?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-               <div class="widget widget_categories">
+               <div class="widget widget_categories widget_categories__search">
                   <h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'universal' ); ?></h2>
                   <ul>
                      <?php
@@ -36,17 +37,20 @@ get_header();
                      );
                      ?>
                   </ul>
-               </div><!-- .widget -->
-
+               </div>
+               <!-- .widget -->
+               
                <?php
                /* translators: %1$s: smiley */
-               $universal_example_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'universal' ), convert_smilies( ':)' ) ) . '</p>';
-               the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$universal_example_archive_content" );
-
+               $universal_example_archive_content = '<p class="archive_search">' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'universal' ), convert_smilies( ':)' ) ) . '</p>';
+               the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$universal_example_archive_content" ); '</div>'
+               ?>
+               
+               <?php
                the_widget( 'WP_Widget_Tag_Cloud' );
                ?>
 
-            </div><!-- .page-content -->
+            </div><!-- .page404-content -->
          </section><!-- .error-404 -->
 
       </main><!-- #main -->
