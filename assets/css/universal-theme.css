@@ -269,7 +269,11 @@ body {
 }
 
 body {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
+}
+
+body#bg-post {
+  background-color: #FFFFFF;
 }
 
 .front-page-header {
@@ -2722,6 +2726,11 @@ body {
 
 .comment-add-comment--hidden-area {
   margin-bottom: 35px;
+}
+
+.search-section {
+  background-color: #e5e5e5;
+  margin-top: 40px;
 }
 
 .search-title {
