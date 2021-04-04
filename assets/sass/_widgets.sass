@@ -1,5 +1,13 @@
-.widget_categories
-   &__search
+.widgettitle
+   padding: 20px 25px
+   border-bottom: 1px solid #D9DADB
+   font-family: "Lato Black", sans-serif
+   font-size: 14px
+   line-height: 20px
+   margin: 0
+   text-transform: uppercase
+.widget
+   &_categories__search
       ul
          list-style: none
          margin: 0
@@ -15,15 +23,6 @@
                   color: inherit
                &:hover
                   text-decoration: underline
-.widgettitle
-   padding: 20px 25px
-   border-bottom: 1px solid #D9DADB
-   font-family: "Lato Black", sans-serif
-   font-size: 14px
-   line-height: 20px
-   margin: 0
-   text-transform: uppercase
-.widget
    select
       margin-top: 15px
       margin-left: 25px
@@ -49,8 +48,65 @@
                   color: inherit
                &:hover
                   text-decoration: underline
+            .post-date
+               color: #bdbbbb
+   &_meta, &_pages, &_recent_comments
+      ul
+         margin: 0
+         padding: 20px 25px
+         list-style: none
+         li
+            margin-bottom: 15px
+            a
+               text-decoration: none
+               color: #262D33
+               &:visited
+                  color: inherit
+               &:hover
+                  text-decoration: underline
+            .comment-author-link
+               .url
+                  font-weight: 900
+   &_text
+      .textwidget
+         padding: 20px 25px
 .archive_search
    margin: 0
    padding-top: 25px
    padding-left: 25px
    padding-right: 25px
+.calendar_wrap
+   padding: 20px 25px
+   caption
+      margin-bottom: 15px
+      font-weight: 900
+      text-transform: uppercase
+   .wp-calendar-table
+      tbody
+         tr
+            td
+               color: #bdbbbb
+               a
+                  text-decoration: none
+                  color: #404040
+   .wp-calendar-nav
+      a
+         text-decoration: none
+         color: #404040
+.custom-html-widget
+   padding: 20px 25px
+.gallery
+   grid-gap: 0
+   &-size-thumbnail
+      padding: 20px 25px
+      display: flex
+      flex-wrap: wrap
+   &-item
+      margin: 0
+      .gallery-icon
+         a
+            &:hover
+               opacity: 0.75
+            .size-thumbnail
+               width: 100%
+               border: none

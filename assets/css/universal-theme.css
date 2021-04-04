@@ -3216,6 +3216,16 @@ body {
   }
 }
 
+.widgettitle {
+  padding: 20px 25px;
+  border-bottom: 1px solid #D9DADB;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .widget_categories__search ul {
   list-style: none;
   margin: 0;
@@ -3241,16 +3251,6 @@ body {
 
 .widget_categories__search ul li a:hover {
   text-decoration: underline;
-}
-
-.widgettitle {
-  padding: 20px 25px;
-  border-bottom: 1px solid #D9DADB;
-  font-family: "Lato Black", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0;
-  text-transform: uppercase;
 }
 
 .widget select {
@@ -3289,9 +3289,98 @@ body {
   text-decoration: underline;
 }
 
+.widget_recent_entries ul li .post-date {
+  color: #bdbbbb;
+}
+
+.widget_meta ul, .widget_pages ul, .widget_recent_comments ul {
+  margin: 0;
+  padding: 20px 25px;
+  list-style: none;
+}
+
+.widget_meta ul li, .widget_pages ul li, .widget_recent_comments ul li {
+  margin-bottom: 15px;
+}
+
+.widget_meta ul li a, .widget_pages ul li a, .widget_recent_comments ul li a {
+  text-decoration: none;
+  color: #262D33;
+}
+
+.widget_meta ul li a:visited, .widget_pages ul li a:visited, .widget_recent_comments ul li a:visited {
+  color: inherit;
+}
+
+.widget_meta ul li a:hover, .widget_pages ul li a:hover, .widget_recent_comments ul li a:hover {
+  text-decoration: underline;
+}
+
+.widget_meta ul li .comment-author-link .url, .widget_pages ul li .comment-author-link .url, .widget_recent_comments ul li .comment-author-link .url {
+  font-weight: 900;
+}
+
+.widget_text .textwidget {
+  padding: 20px 25px;
+}
+
 .archive_search {
   margin: 0;
   padding-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.calendar_wrap {
+  padding: 20px 25px;
+}
+
+.calendar_wrap caption {
+  margin-bottom: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.calendar_wrap .wp-calendar-table tbody tr td {
+  color: #bdbbbb;
+}
+
+.calendar_wrap .wp-calendar-table tbody tr td a {
+  text-decoration: none;
+  color: #404040;
+}
+
+.calendar_wrap .wp-calendar-nav a {
+  text-decoration: none;
+  color: #404040;
+}
+
+.custom-html-widget {
+  padding: 20px 25px;
+}
+
+.gallery {
+  grid-gap: 0;
+}
+
+.gallery-size-thumbnail {
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gallery-item {
+  margin: 0;
+}
+
+.gallery-item .gallery-icon a:hover {
+  opacity: 0.75;
+}
+
+.gallery-item .gallery-icon a .size-thumbnail {
+  width: 100%;
+  border: none;
 }
