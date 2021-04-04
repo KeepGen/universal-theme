@@ -1464,6 +1464,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
   .latest-articles .post-list .post .latest-article-permalink, .latest-articles .post-list .post .search-article-permalink {
     -webkit-box-orient: vertical;
@@ -2761,6 +2762,12 @@ body {
 
 .pagination {
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .search-article-permalink {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
