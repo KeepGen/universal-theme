@@ -1365,6 +1365,17 @@ body {
   color: #262D33;
 }
 
+.latest-articles .post-list .post .search-article-permalink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+.latest-articles .post-list .post .search-article-permalink:visited, .latest-articles .post-list .post .search-article-permalink:focus, .latest-articles .post-list .post .search-article-permalink:hover {
+  color: #262D33;
+}
+
 .latest-articles .post-list .post-info {
   margin-left: 25px;
 }
@@ -1454,7 +1465,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .latest-articles .post-list .post .latest-article-permalink {
+  .latest-articles .post-list .post .latest-article-permalink, .latest-articles .post-list .post .search-article-permalink {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
